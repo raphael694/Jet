@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JetX Predictor UI</title>
+    <style>
+        body { background-color: #121212; color: white; font-family: Arial, sans-serif; display: flex; justify-content: center; padding: 20px; }
+        .card { background: #1e1e1e; border: 2px solid #ffcc00; border-radius: 15px; padding: 20px; width: 100%; max-width: 350px; text-align: center; }
+        h2 { color: #ffcc00; font-size: 1.2rem; margin-bottom: 20px; }
+        .input-group { margin-bottom: 15px; text-align: left; }
+        label { font-size: 0.8rem; color: #aaa; text-transform: uppercase; }
+        input { width: 100%; padding: 10px; margin-top: 5px; background: #2a2a2a; border: 1px solid #444; color: #ffcc00; border-radius: 5px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background: #00c853; border: none; border-radius: 5px; color: black; font-weight: bold; cursor: pointer; margin-top: 10px; }
+        .result-box { margin-top: 20px; padding: 15px; background: #d50000; border-radius: 10px; display: none; }
+        .result-box h3 { margin: 0; font-size: 1.5rem; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>✨ BLIZZARD-JETX ✨</h2>
+    
+    <div class="input-group">
+        <label>Heure de Départ</label>
+        <input type="text" placeholder="-- : -- : --">
+    </div>
+
+    <div class="input-group">
+        <label># HASH</label>
+        <input type="text" id="hashInput" placeholder="Ampidiro ny Hash...">
+    </div>
+
+    <button onclick="calculate()">CALCULER M.H.S</button>
+
+    <div id="result" class="result-box">
+        <p style="font-size: 0.7rem; margin: 0;">RÉSULTAT FINAL</p>
+        <h3 id="timeResult">11:51:45</h3>
+    </div>
+</div>
+
+<script>
+    function calculate() {
+        // Ity dia fakan-tahaka fotsiny (Simulation)
+        const resultDiv = document.getElementById('result');
+        const timeResult = document.getElementById('timeResult');
+        
+        resultDiv.style.display = 'block';
+        // Manome lera kisendrasendra fotsiny izy eto
+        timeResult.innerText = "11:" + Math.floor(Math.random() * 60) + ":" + Math.floor(Math.random() * 60);
+    }
+</script>
+
+</body>
+</html>
